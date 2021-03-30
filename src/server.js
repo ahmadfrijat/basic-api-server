@@ -17,7 +17,9 @@ app.use(morgan('dev'));
 app.use(cors());
 
 
-
+app.get('/', (req, res) => {
+  res.send('Hello World');
+});
 app.use('/api/v1/food/', foodRouter);
 app.use('/api/v1/clothes/', clothesRouter);
 
